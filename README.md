@@ -26,6 +26,10 @@ These are the settings that can be added to your GameUserSettings.ini file to cu
 
 [ImprintKibble]
 
+EnableMutationBuff=True
+
+MutationBuffTimer=1800.0
+
 EnableImprintQuality=True
 
 ImprintQuality=1.0
@@ -33,8 +37,6 @@ ImprintQuality=1.0
 EnableExtraMatureSpeed=True
 
 ExtraMatureSpeed=2.0
-
-EnableMutationBuff=True
 
 EnableNoMatingCooldownBuff=True
 
@@ -46,59 +48,55 @@ EnableExtraMutationsBuff=True
 
 NumberOfMutations=1
 
-EnableExtraGestationSpeed=True
-
-ExtraGestationSpeed=5.0
-
-MutationBuffTimer=1800.0
-
 PointsPerMutation=2.0
 
+EnableFasterGestation=True
+
+ExtraGestationInterval=6.0
+
+ExtraGestationPercentage=0.01
+
+EnableMatingTimeReduction=True
+
+MatingTime=5.0
 
 
 Config Description
 ------------------
 
-EnableImprintQuality: Enables the ability for the Imprint Kibble to increase imprint percentage on a baby dinosaur. Default: True
-
-
-ImprintQuality: The amount of imprint percentage one Imprint Kibble will add to a baby dinosaur. Range of 0.0 to 1.0 (1.0 = 100%, 0.3 = 30%, 0.05 = 5%, etc.). Default: 1.0
-
-
-EnableExtraMatureSpeed: Enables the ability for the Imprint Kibble to increase the maturation speed of a baby dinosaur. Default: True
-
-
-ExtraMatureSpeed: The multiplier that the baby dinosaur's maturation speed will increase by. This will equal your BabyMatureSpeedMultiplier x ExtraMatureSpeed. Default: 2.0
-
-
 EnableMutationBuff: Enables the buff that the Imprint Kibble gives an adult female dinosaur. Default: True
-
-
-EnableNoMatingCooldownBuff: Enables the Imprint Kibble buff to remove the mating cooldown. Default: True
-
-
-EnableExtraMutationChanceBuff: Enables the Imprint Kibble buff to increase the odds of a baby dinosaur receiving a mutation. Default: True
-
-
-ExtraMutationChance: The chance of a baby dinosaur recieving mutation(s). Range of 0.0 to 1.0 (1.0 = 100%, 0.3 = 30%, 0.05 = 5%, etc.). Default: 1.0
-
-
-EnableExtraMutationsBuff: Enables the Imprint Kibble buff to change the amount of mutations a baby dinosaur can receive. Default: True
-
-
-NumberOfMutations: The number of mutations a baby dinosaur can get. Further explanation on this below. Default: 1
-
-
-EnableExtraGestationSpeed: Enables the Imprint Kibble buff to increase the gestation speed of an adult dinosaur. Default: True
-
-
-ExtraGestationSpeed: The multiplier that the parent dinosaur's gestation speed will increase by. This will equal your EggHatchSpeedMultiplier x ExtraMatureSpeed. Default: 2.0
-
 
 MutationBuffTimer: The amount of time the Imprint Kibble buff will last. Default: 1800.0 (30 minutes)
 
+EnableImprintQuality: Enables the ability for the Imprint Kibble to increase imprint percentage on a baby dinosaur. Default: True
 
-PointsPerMutation: The stat points a single mutation gives. Default: 2.0
+ImprintQuality: The amount of imprint percentage one Imprint Kibble will add to a baby dinosaur. Range of 0.0 to 1.0 (1.0 = 100%, 0.3 = 30%, 0.05 = 5%, etc.). Default: 1.0
+
+EnableExtraMatureSpeed: Enables the ability for the Imprint Kibble to increase the maturation speed of a baby dinosaur. Default: True
+
+ExtraMatureSpeed: The multiplier that the baby dinosaur's maturation speed will increase by. This will equal your BabyMatureSpeedMultiplier x ExtraMatureSpeed. Default: 2.0
+
+EnableNoMatingCooldownBuff: Enables the Imprint Kibble buff to remove the mating cooldown. Default: True
+
+EnableExtraMutationChanceBuff: Enables the Imprint Kibble buff to increase the odds of a baby dinosaur receiving a mutation. Default: True
+
+ExtraMutationChance: The chance of a baby dinosaur receiving mutation(s). Range of 0.0 to 1.0 (1.0 = 100%, 0.3 = 30%, 0.05 = 5%, etc.). Default: 1.0
+
+EnableExtraMutationsBuff: Enables the Imprint Kibble buff to change the number of mutations a baby dinosaur can receive. Default: True
+
+NumberOfMutations: The number of mutations a baby dinosaur can get. Further explanation on this below. Default: 1
+
+PointsPerMutation: The stat points a single mutation gives. ASA gives 2 by default. Default: 2.0
+
+EnableFasterGestation: Enables the Imprint Kibble buff to increase the gestation speed of an adult dinosaur. Default: True
+
+ExtraGestationInterval: The interval that the gestation time will increase by the ExtraGestationPercentage. Further explanation on this below. Default: 5.0
+
+ExtraGestationPercentage: The percentage that the gestation bar will increase every ExtraGestationInterval. Range of 0.0 to 1.0 (1.0 = 100%, 0.3 = 30%, 0.05 = 5%, etc.). Default: 0.05
+
+EnableMatingTimeReduction: Enables the Imprint Kibble buff to reduce the amount of time it takes 2 dinos to mate. Default: True
+
+MatingTime: How long it takes the mating bar to fill up. Default: 5.0
  
 
 
@@ -114,3 +112,13 @@ If you want to make the buff double mutation odds you can do ExtraMutationChance
 If you want to make the buff give 10 guaranteed mutations you can do ExtraMutationChance=1.0 and NumberOfMutations=10
 
 The default is just one guaranteed mutation, ExtraMutationChance=1.0 and NumberOfMutations=1
+
+
+ExtraGestationInterval and ExtraGestationPercentage
+-----------------------------------------
+
+Example: ExtraGestationInterval=6.0 and ExtraGestationPercentage=0.01.
+
+This means that every 6.0 seconds, the gestation bar will increase by an extra 1%, and it will take 600 seconds (10 minutes) for a dinosaur to finish gestating.
+
+This time will be the same for every dino. So a Mosasaurus will take the same amount of time to gestate as a Phiomia would with this setting.
