@@ -77,7 +77,7 @@ OverrideNamedEngramEntries=(EngramClassName="EngramEntry_ImprintKibble_C", Engra
 
 ConfigOverrideItemCraftingCosts=(ItemClassString="PrimalItemConsumable_ImprintKibble_C",BaseCraftingResourceRequirements=((ResourceItemTypeString="PrimalItemConsumable_RawMeat_C",BaseResourceRequirement=3.0,bCraftingRequireExactResourceType=false),(ResourceItemTypeString="PrimalItemResource_Element_C",BaseResourceRequirement=2.0,bCraftingRequireExactResourceType=false)))
 
-Config Description
+Config Description - GameUserSettings.ini
 ------------------
 
 EnableMutationBuff: Enables the buff that the Imprint Kibble gives an adult female dinosaur. Default: True
