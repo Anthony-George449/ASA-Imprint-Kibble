@@ -9,8 +9,8 @@ Spawn code: cheat gfi PrimalItemConsumable_ImprintKibble 1 0 0
 This mod is inspired by the Magic Treat mod by Zogniton: https://www.curseforge.com/ark-survival-ascended/mods/magic-treat. It aims to be a more customizable version of this mod.
 
 
-### Description
-
+Description
+==============
 This mod adds an "Imprint Kibble" that can be learned at level 16 for 0 engram points and crafted in a cooking pot or industrial cooker. The Imprint Kibble costs 1 of each Kibble.
 
 
@@ -24,8 +24,8 @@ An option to set a cooldown after the kibble is used can also be enabled.
 
 All of these options can be customized in your GameUserSettings.ini.
 
-### Config options - GameUserSettings.ini
-
+Config options - GameUserSettings.ini
+==============
 These are the settings that can be added to your GameUserSettings.ini file to customize this mod, with the default values:
 
 
@@ -55,8 +55,8 @@ BabyKibbleCooldownTime=1800.0
 ```
 
 
-### Config options - Game.ini
-
+Config options - Game.ini
+==============
 These are the settings that can be added to your Game.ini file to customize the crafting cost, unlock level, and engram point cost.
 
 The example below would set the engram point cost to 10, the unlock level to 75, and would change the crafting cost to 3 raw meat + 2 element. Edit these as you see fit:
@@ -67,8 +67,8 @@ ConfigOverrideItemCraftingCosts=(ItemClassString="PrimalItemConsumable_ImprintKi
 ```
 
 
-### Config Description - GameUserSettings.ini
-
+Config Description - GameUserSettings.ini
+==============
 - EnableMutationBuff: Enables the buff that the Imprint Kibble gives an adult female dinosaur. Default: True
 - MutationBuffTimer: The amount of time the Imprint Kibble buff will last. Default: 1800.0 (30 minutes)
 - EnableImprintQuality: Enables the ability for the Imprint Kibble to increase imprint percentage on a baby dinosaur. Default: True
@@ -91,8 +91,8 @@ ConfigOverrideItemCraftingCosts=(ItemClassString="PrimalItemConsumable_ImprintKi
 - EnableBabyKibbleCooldown: Enables giving a baby dino a cooldown after using the Imprint Kibble. The dino can still eat a kibble, but will not get any benefit. Further explanation below. Default: False
 - BabyKibbleCooldownTime: How long a baby dino has to wait before being able to benefit from an Imprint Kibble again. Default: 1800.0 (30 minutes)
 
-### ExtraMutationChance and NumberOfMutations
-
+ExtraMutationChance and NumberOfMutations
+==============
 In ASA, the value for ExtraMutationChance=0.025 (2.5%) and the value for NumberOfMutations=3
 
 This means you have 3 2.5% chances to get a mutation, which is how you can get up to 3 mutations on a single baby
@@ -104,8 +104,8 @@ If you want to make the buff give 10 guaranteed mutations you can do ExtraMutati
 The default is just one guaranteed mutation, ExtraMutationChance=1.0 and NumberOfMutations=1
 
 
-### ExtraGestationInterval and ExtraGestationPercentage
-
+ExtraGestationInterval and ExtraGestationPercentage
+==============
 Example: ExtraGestationInterval=6.0 and ExtraGestationPercentage=0.01.
 
 This means that every 6.0 seconds, the gestation bar will increase by an extra 1%, and it will take 600 seconds (10 minutes) for a dinosaur to finish gestating.
@@ -113,14 +113,16 @@ This means that every 6.0 seconds, the gestation bar will increase by an extra 1
 This time will be the same for every dino. So a Mosasaurus will take the same amount of time to gestate as a Phiomia would with this setting. 
 
 
-### AdultKibbleCooldown and BabyKibbleCooldown
-
+AdultKibbleCooldown and BabyKibbleCooldown
+==============
 These settings will allow you to customize how frequently the Imprint Kibble benefits can be granted. After the Imprint Kibble buff falls off, it is replaced by a debuff that will prevent the benefits of the Imprint Kibble.
 
 The debuff that is applied will carry over to adulthood for a baby dino. Let me give an example using the following settings:
+```
 EnableAdultKibbleCooldown=True
 AdultKibbleCooldownTime=60.0
 EnableBabyKibbleCooldown=True
 BabyKibbleCooldownTime=1800.0
+```
 
 In this case, an adult dino would have to wait 60 seconds between receiving the Imprint Kibble buff, and a baby would have to wait 30 minutes (1800 seconds). However, let's say your baby only takes 10 minutes to fully grow after using the Imprint Kibble on it. If you then wanted to replace the previous adult dino with the fully grown baby, the baby would still have 20 minutes left on the debuff timer, which means you have to wait 20 minutes before using the Imprint Kibble on the grown baby. This allows you to customize how quickly players can cycle mutations.
