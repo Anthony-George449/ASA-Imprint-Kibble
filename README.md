@@ -106,8 +106,11 @@ The default is just one guaranteed mutation, ExtraMutationChance=1.0 and NumberO
 
 ExtraGestationInterval and ExtraGestationPercentage
 ==============
-Example: ExtraGestationInterval=6.0 and ExtraGestationPercentage=0.01.
-
+Example:
+```
+ExtraGestationInterval=6.0
+ExtraGestationPercentage=0.01
+```
 This means that every 6.0 seconds, the gestation bar will increase by an extra 1%, and it will take 600 seconds (10 minutes) for a dinosaur to finish gestating.
 
 This time will be the same for every dino. So a Mosasaurus will take the same amount of time to gestate as a Phiomia would with this setting. 
