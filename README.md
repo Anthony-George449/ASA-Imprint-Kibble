@@ -24,10 +24,10 @@ An option to set a cooldown after the kibble is used can also be enabled.
 
 All of these options can be customized in your GameUserSettings.ini.
 
+
 Config options - GameUserSettings.ini
 ==============
 These are the settings that can be added to your GameUserSettings.ini file to customize this mod, with the default values:
-
 
 ```
 [ImprintKibble]
@@ -54,10 +54,9 @@ EnableBabyKibbleCooldown=False
 BabyKibbleCooldownTime=1800.0
 ```
 
-
 Config options - Game.ini
 ==============
-These are the settings that can be added to your Game.ini file to customize the crafting cost, unlock level, and engram point cost.
+These settings can be added to your Game.ini file to customize the crafting cost, unlock level, and engram point cost.
 
 The example below would set the engram point cost to 10, the unlock level to 75, and would change the crafting cost to 3 raw meat + 2 element. Edit these as you see fit:
 
@@ -65,7 +64,6 @@ The example below would set the engram point cost to 10, the unlock level to 75,
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_ImprintKibble_C", EngramHidden=false, EngramPointsCost=10, EngramLevelRequirement=75)
 ConfigOverrideItemCraftingCosts=(ItemClassString="PrimalItemConsumable_ImprintKibble_C",BaseCraftingResourceRequirements=((ResourceItemTypeString="PrimalItemConsumable_RawMeat_C",BaseResourceRequirement=3.0,bCraftingRequireExactResourceType=false),(ResourceItemTypeString="PrimalItemResource_Element_C",BaseResourceRequirement=2.0,bCraftingRequireExactResourceType=false)))
 ```
-
 
 Config Description - GameUserSettings.ini
 ==============
@@ -97,18 +95,18 @@ In ASA, the value for ExtraMutationChance=0.025 (2.5%) and the value for NumberO
 
 This means you have 3 2.5% chances to get a mutation, which is how you can get up to 3 mutations on a single baby
 
-If you want to make the buff double mutation odds you can do ExtraMutationChance=0.05 and NumberOfMutations=3
+If you want to make the buff double mutation odds, you can do ExtraMutationChance=0.05 and NumberOfMutations=3
 
-If you want to make the buff give 10 guaranteed mutations you can do ExtraMutationChance=1.0 and NumberOfMutations=10
+If you want to make the buff give 10 guaranteed mutations, you can do ExtraMutationChance=1.0 and NumberOfMutations=10
 
 The default is just one guaranteed mutation, ExtraMutationChance=1.0 and NumberOfMutations=1
 
 
 ExtraGestationInterval and ExtraGestationPercentage
 ==============
-Example:
+Example: 
 ```
-ExtraGestationInterval=6.0
+ExtraGestationInterval=6.0 
 ExtraGestationPercentage=0.01
 ```
 This means that every 6.0 seconds, the gestation bar will increase by an extra 1%, and it will take 600 seconds (10 minutes) for a dinosaur to finish gestating.
@@ -118,14 +116,14 @@ This time will be the same for every dino. So a Mosasaurus will take the same am
 
 AdultKibbleCooldown and BabyKibbleCooldown
 ==============
-These settings will allow you to customize how frequently the Imprint Kibble benefits can be granted. After the Imprint Kibble buff falls off, it is replaced by a debuff that will prevent the benefits of the Imprint Kibble.
+These settings let you customize how often the Imprint Kibble benefits are granted. After the Imprint Kibble buff falls off, it is replaced by a debuff that will prevent the benefits of the Imprint Kibble.
 
 The debuff that is applied will carry over to adulthood for a baby dino. Let me give an example using the following settings:
+
 ```
 EnableAdultKibbleCooldown=True
 AdultKibbleCooldownTime=60.0
 EnableBabyKibbleCooldown=True
 BabyKibbleCooldownTime=1800.0
 ```
-
 In this case, an adult dino would have to wait 60 seconds between receiving the Imprint Kibble buff, and a baby would have to wait 30 minutes (1800 seconds). However, let's say your baby only takes 10 minutes to fully grow after using the Imprint Kibble on it. If you then wanted to replace the previous adult dino with the fully grown baby, the baby would still have 20 minutes left on the debuff timer, which means you have to wait 20 minutes before using the Imprint Kibble on the grown baby. This allows you to customize how quickly players can cycle mutations.
